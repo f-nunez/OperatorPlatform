@@ -14,4 +14,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\OperatorPlatform.Mappings\OperatorPlatform.Mappings.csproj" />
+    <ProjectReference Include="..\OperatorPlatform.Models\OperatorPlatform.Models.csproj" />
+  </ItemGroup>
+
 </Project>
