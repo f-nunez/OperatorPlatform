@@ -14,6 +14,7 @@ namespace OperatorPlatform.Models
         public decimal BollingerUpperBandSecond { get; set; }
         public decimal BollingerUpperBandThird { get; set; }
         public decimal Close { get; set; }
+        public DateTime CreatedOn { get; set; }
         public int ExchangeBarId { get; set; }
         public decimal High { get; set; }
         public decimal Low { get; set; }
@@ -21,6 +22,7 @@ namespace OperatorPlatform.Models
         public BarStatus Status { get; set; }
         public DateTime Time { get; set; }
         public TimeFrame TimeFrame { get; set; }
+        public DateTime? UpdatedOn { get; set; }
         public int Volume { get; set; }
 
         public int TickerId { get; set; }
