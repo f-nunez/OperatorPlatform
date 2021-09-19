@@ -20,6 +20,18 @@ namespace OperatorPlatform.Mappings
                 .HasForeignKey(x => x.TickerId)
                 .OnDelete(DeleteBehavior.NoAction);
 
+            builder.Property(x => x.BollingerLowerBandFirst)
+                .HasPrecision(MaximumNumberOfDigits, MaximumNumberOfDecimalPlaces);
+            builder.Property(x => x.BollingerLowerBandSecond)
+                .HasPrecision(MaximumNumberOfDigits, MaximumNumberOfDecimalPlaces);
+            builder.Property(x => x.BollingerLowerBandThird)
+                .HasPrecision(MaximumNumberOfDigits, MaximumNumberOfDecimalPlaces);
+            builder.Property(x => x.BollingerUpperBandFirst)
+                .HasPrecision(MaximumNumberOfDigits, MaximumNumberOfDecimalPlaces);
+            builder.Property(x => x.BollingerUpperBandSecond)
+                .HasPrecision(MaximumNumberOfDigits, MaximumNumberOfDecimalPlaces);
+            builder.Property(x => x.BollingerUpperBandThird)
+                .HasPrecision(MaximumNumberOfDigits, MaximumNumberOfDecimalPlaces);
             builder.Property(x => x.Close)
                 .HasPrecision(MaximumNumberOfDigits, MaximumNumberOfDecimalPlaces);
             builder.Property(x => x.High)
