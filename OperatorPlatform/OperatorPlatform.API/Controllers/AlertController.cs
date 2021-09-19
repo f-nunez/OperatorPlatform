@@ -7,14 +7,14 @@ namespace OperatorPlatform.API.Controllers
     [Route("[controller]")]
     public class AlertController : ControllerBase
     {
-        [HttpPost]
+        [HttpPost("PostBarAlert")]
         public IActionResult PostBarAlert(BarAlertDto barAlert)
         {
             var resultMessage = $"The ticker that comes from BarAlert is {barAlert.TickerName.ToUpper()}";
             return Ok(resultMessage);
         }
 
-        [HttpPost]
+        [HttpPost("PostIndicatorAlert")]
         public IActionResult PostIndicatorAlert(IndicatorAlertDto indicatorAlert)
         {
             var resultMessage = $"The ticker that comes from IndicatorAlert is {indicatorAlert.TickerName.ToUpper()}";
