@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using OperatorPlatform.Data;
 
 namespace OperatorPlatform.Data.Migrations
 {
     [DbContext(typeof(OperatorPlatformDbContext))]
-    partial class OperatorPlatformDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210919072412_Add_Status_into_Bar")]
+    partial class Add_Status_into_Bar
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
