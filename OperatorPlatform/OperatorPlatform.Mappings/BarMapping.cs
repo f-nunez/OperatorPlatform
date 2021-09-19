@@ -40,6 +40,8 @@ namespace OperatorPlatform.Mappings
                 .HasPrecision(MaximumNumberOfDigits, MaximumNumberOfDecimalPlaces);
             builder.Property(x => x.Open)
                 .HasPrecision(MaximumNumberOfDigits, MaximumNumberOfDecimalPlaces);
+            builder.Property(x => x.MovingAverage)
+                .HasPrecision(MaximumNumberOfDigits, MaximumNumberOfDecimalPlaces);
         }
     }
 }
