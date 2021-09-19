@@ -18,6 +18,7 @@ namespace OperatorPlatform.Models
         public int ExchangeBarId { get; set; }
         public decimal High { get; set; }
         public decimal Low { get; set; }
+        public decimal MovingAverage { get; set; }
         public decimal Open { get; set; }
         public BarStatus Status { get; set; }
         public DateTime Time { get; set; }
