@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using OperatorPlatform.Data;
 
 namespace OperatorPlatform.Data.Migrations
 {
     [DbContext(typeof(OperatorPlatformDbContext))]
-    partial class OperatorPlatformDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210919072928_Add_CreatedOn_and_UpdatedOn")]
+    partial class Add_CreatedOn_and_UpdatedOn
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
