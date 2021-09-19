@@ -7,6 +7,12 @@ namespace OperatorPlatform.Models
 {
     public class Bar : BaseLogicModel
     {
+        public decimal BollingerLowerBandFirst { get; set; }
+        public decimal BollingerLowerBandSecond { get; set; }
+        public decimal BollingerLowerBandThird { get; set; }
+        public decimal BollingerUpperBandFirst { get; set; }
+        public decimal BollingerUpperBandSecond { get; set; }
+        public decimal BollingerUpperBandThird { get; set; }
         public decimal Close { get; set; }
         public int ExchangeBarId { get; set; }
         public decimal High { get; set; }
