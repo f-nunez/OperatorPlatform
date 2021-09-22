@@ -1,21 +1,25 @@
-﻿namespace OperatorPlatform.Models.DataTransferObjects
+﻿using OperatorPlatform.Models.Enums;
+using System;
+
+namespace OperatorPlatform.Models.DataTransferObjects
 {
     public class BarAlertDto
     {
-        public string BollingerLowerBandFirst { get; set; }
-        public string BollingerLowerBandSecond { get; set; }
-        public string BollingerLowerBandThird { get; set; }
-        public string BollingerUpperBandFirst { get; set; }
-        public string BollingerUpperBandSecond { get; set; }
-        public string BollingerUpperBandThird { get; set; }
-        public string Close { get; set; }
-        public string ExchangeBarId { get; set; }
-        public string High { get; set; }
-        public string Low { get; set; }
-        public string MovingAverage { get; set; }
-        public string Open { get; set; }
+        public decimal BollingerLowerBandFirst { get; set; }
+        public decimal BollingerLowerBandSecond { get; set; }
+        public decimal BollingerLowerBandThird { get; set; }
+        public decimal BollingerUpperBandFirst { get; set; }
+        public decimal BollingerUpperBandSecond { get; set; }
+        public decimal BollingerUpperBandThird { get; set; }
+        public decimal Close { get; set; }
+        public int ExchangeBarId { get; set; }
+        public decimal High { get; set; }
+        public decimal Low { get; set; }
+        public decimal MovingAverage { get; set; }
+        public decimal Open { get; set; }
         public string TickerName { get; set; }
-        public string Time { get; set; }
-        public string Volume { get; set; }
+        public DateTime Time { get; set; }
+        public TimeFrame TimeFrame { get; set; }
+        public int Volume { get; set; }
     }
 }
