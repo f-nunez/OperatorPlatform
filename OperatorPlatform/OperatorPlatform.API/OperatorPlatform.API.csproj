@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\OperatorPlatform.Business\OperatorPlatform.Business.csproj" />
     <ProjectReference Include="..\OperatorPlatform.Data\OperatorPlatform.Data.csproj" />
   </ItemGroup>
 

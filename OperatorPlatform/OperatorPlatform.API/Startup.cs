@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using OperatorPlatform.Business;
 using OperatorPlatform.Data;
 using System;
 using System.Collections.Generic;
@@ -29,13 +30,13 @@ namespace OperatorPlatform.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "OperatorPlatform.API", Version = "v1" });
             });
             services.AddDbContext<OperatorPlatformDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString(ConnectionStringName)));
+            ConfigureBusiness(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -58,6 +59,16 @@ namespace OperatorPlatform.API
             {
                 endpoints.MapControllers();
             });
+        }
+
+        private void ConfigureBusiness(IServiceCollection services)
+        {
+            services.AddScoped<AlertBusiness, AlertBusiness>();
+            services.AddScoped<BarBusiness, BarBusiness>();
+            services.AddScoped<ExchangeBusiness, ExchangeBusiness>();
+            services.AddScoped<IndicatorBusiness, IndicatorBusiness>();
+            services.AddScoped<OperationBusiness, OperationBusiness>();
+            services.AddScoped<TickerBusiness, TickerBusiness>();
         }
     }
 }
